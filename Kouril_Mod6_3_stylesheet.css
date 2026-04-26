@@ -1,0 +1,142 @@
+/* ------------------------------
+   GLOBAL STYLES & VARIABLES
+--------------------------------*/
+:root {
+    --primary-blue: #135FE0;
+    --accent-blue: #3DBCF0;
+    --aqua: #12FBFF;
+    --neon-green: #18FF77;
+    --mint: #4AF5C6;
+
+    --text-dark: #0A0A0A;
+
+    --font-body: 'Roboto', sans-serif;
+
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-48: 48px;
+    --spacing-64: 64px;
+}
+
+/* ------------------------------
+   BASE ELEMENTS
+--------------------------------*/
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: var(--spacing-24);
+    background-color: var(--mint);
+    color: var(--text-dark);
+}
+
+header {
+    margin-bottom: var(--spacing-32);
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--primary-blue);
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+p, li {
+    font-size: 16px;
+}
+
+nav {
+    margin-bottom: var(--spacing-24);
+    display: flex;
+    gap: var(--spacing-12);
+}
+
+/* ------------------------------
+   BUTTONS
+--------------------------------*/
+.primary-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary-btn:hover {
+    background-color: #0f4ec0; /* 10% darker */
+}
+
+.secondary-btn {
+    background-color: var(--accent-blue);
+    color: var(--text-dark);
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.secondary-btn:hover {
+    background-color: #32a8d8;
+}
+
+.accent-btn {
+    background-color: var(--neon-green);
+    color: var(--text-dark);
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ------------------------------
+   FORMS
+--------------------------------*/
+input, textarea, select {
+    border: 1px solid var(--accent-blue);
+    padding: var(--spacing-12);
+    border-radius: 6px;
+    background-color: white;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--aqua);
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+/* Error states */
+.error {
+    border-color: #FF4A4A !important;
+    color: #FF4A4A;
+}
+
+/* ------------------------------
+   CONTENT SECTIONS
+--------------------------------*/
+.content {
+    background: white;
+    padding: var(--spacing-24);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

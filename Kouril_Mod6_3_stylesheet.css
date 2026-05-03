@@ -1,5 +1,5 @@
 /* ------------------------------
-   GLOBAL STYLES & VARIABLES
+	GLOBAL STYLES & VARIABLES
 --------------------------------*/
 :root {
     --primary-blue: #135FE0;
@@ -23,120 +23,171 @@
 }
 
 /* ------------------------------
-   BASE ELEMENTS
+	BASE ELEMENTS
 --------------------------------*/
 body {
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: var(--spacing-24);
-    background-color: var(--mint);
-    color: var(--text-dark);
+	font-family: var(--font-body);
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: var(--spacing-24);
+	background-color: var(--mint);
+	color: var(--text-dark);
 }
 
 header {
-    margin-bottom: var(--spacing-32);
+	margin-bottom: var(--spacing-32);
 }
 
 h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--primary-blue);
-    letter-spacing: -0.5px;
+	font-size: 36px;
+	font-weight: bold;
+	color: var(--primary-blue);
+	letter-spacing: -0.5px;
 }
 
 h2 {
-    font-size: 26px;
-    font-weight: 600;
-    letter-spacing: -0.3px;
+	font-size: 26px;
+	font-weight: 600;
+	letter-spacing: -0.3px;
 }
 
 h3 {
-    font-size: 21px;
-    font-weight: 600;
+	font-size: 21px;
+	font-weight: 600;
 }
 
 p, li {
-    font-size: 16px;
+	font-size: 16px;
 }
 
 nav {
-    margin-bottom: var(--spacing-24);
-    display: flex;
-    gap: var(--spacing-12);
+	margin-bottom: var(--spacing-24);
+	display: flex;
+	gap: var(--spacing-12);
 }
 
 /* ------------------------------
-   BUTTONS
+	BUTTONS
 --------------------------------*/
 .primary-btn {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
+	background-color: var(--primary-blue);
+	color: white;
+	padding: 12px 20px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
 }
 
 .primary-btn:hover {
-    background-color: #0f4ec0; /* 10% darker */
+	background-color: #0f4ec0;
 }
 
 .secondary-btn {
-    background-color: var(--accent-blue);
-    color: var(--text-dark);
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
+	background-color: var(--accent-blue);
+	color: var(--text-dark);
+	padding: 12px 20px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
 }
 
 .secondary-btn:hover {
-    background-color: #32a8d8;
+	background-color: #32a8d8;
 }
 
 .accent-btn {
-    background-color: var(--neon-green);
-    color: var(--text-dark);
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
+	background-color: var(--neon-green);
+	color: var(--text-dark);
+	padding: 12px 20px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
 }
 
 /* ------------------------------
-   FORMS
+	FORMS
 --------------------------------*/
 input, textarea, select {
-    border: 1px solid var(--accent-blue);
-    padding: var(--spacing-12);
-    border-radius: 6px;
-    background-color: white;
+	border: 1px solid var(--accent-blue);
+	padding: var(--spacing-12);
+	border-radius: 6px;
+	background-color: white;
 }
 
 input:focus, textarea:focus, select:focus {
-    outline: 2px solid var(--aqua);
+	outline: 2px solid var(--aqua);
 }
 
 label {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--primary-blue);
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--primary-blue);
 }
 
 /* Error states */
 .error {
-    border-color: #FF4A4A !important;
-    color: #FF4A4A;
+	border-color: #FF4A4A !important;
+	color: #FF4A4A;
 }
 
 /* ------------------------------
-   CONTENT SECTIONS
+	CONTENT SECTIONS
 --------------------------------*/
 .content {
-    background: white;
-    padding: var(--spacing-24);
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+	background: white;
+	padding: var(--spacing-24);
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Universal responsive image rule */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1rem auto;
+	border-radius: 8px;
+}
+
+/* Small portrait image */
+.profile-img {
+	max-width: 300px;
+	width: 100%;
+	margin: 1rem auto;
+}
+
+/* Wide travel photo */
+.wide-img {
+	max-width: 700px;
+	width: 100%;
+	margin: 1rem auto;
+}
+
+/* Gaming image grid */
+.game-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+/* Individual game items */
+.game-item {
+	text-align: center;
+}
+
+/* Consistent game image sizing */
+.game-img {
+	max-width: 180px;
+	width: 100%;
+	margin: 0 auto 8px auto;
+	border-radius: 8px;
+}
+
+/* Captions */
+.caption {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--primary-blue);
 }

@@ -135,7 +135,7 @@ label {
 	CONTENT SECTIONS
 --------------------------------*/
 .content {
-	background: white;
+	background: linear-gradient(180deg, #ffffff, #fdfefe);
 	padding: var(--spacing-24);
 	border-radius: 8px;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -152,9 +152,21 @@ img {
 
 /* Small portrait image */
 .profile-img {
-	max-width: 300px;
-	width: 100%;
-	margin: 1rem auto;
+	max-width: 260px;
+	float: right;
+	margin: 0 0 1rem 1.5rem;
+	border-radius: 20px;
+	border: 2px solid rgba(0,0,0,0.05);
+	box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+	transition: all 0.25s ease;
+	position: relative;
+	z-index: 5;
+}
+
+.profile-img:hover {
+	transform: scale(1.03);
+	box-shadow: 0 12px 28px rgba(0,0,0,0.15),
+		0 0 12px var(--aqua);
 }
 
 /* Wide travel photo */
@@ -190,4 +202,192 @@ img {
 	font-size: 14px;
 	font-weight: 600;
 	color: var(--primary-blue);
+}
+
+/* INTERVIEW LAYOUT */
+.interview {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 1.5rem;
+	position: relative;
+	padding-left: 40px; /* space for icons + line */
+}
+
+/* Connecting line */
+.interview::before {
+	content: "";
+	position: absolute;
+	left: 18px;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background: rgba(0,0,0,0.08);
+	border-radius: 3px;
+}
+
+/* Base bubble style */
+.interview h3,
+.interview p {
+	padding: 16px 20px;
+	border-radius: 14px;
+	max-width: 90%;
+	position: relative;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Q ICON */
+.interview h3::before {
+	content: "Q";
+	position: absolute;
+	left: -40px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--primary-blue);
+	color: white;
+	font-weight: bold;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+}
+
+/* A ICON */
+.interview p::before {
+	content: "A";
+	position: absolute;
+	left: -40px;
+	top: 20px;
+	background: var(--accent-blue);
+	color: var(--text-dark);
+	font-weight: bold;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+}
+
+/* Alternating bubble colors */
+.interview h3:nth-of-type(odd) {
+	background: var(--accent-blue);
+	color: var(--text-dark);
+}
+
+.interview h3:nth-of-type(even) {
+	background: var(--primary-blue);
+	color: white;
+}
+
+.interview p:nth-of-type(odd) {
+	background: #f7f7f7;
+	border: 1px solid rgba(0,0,0,0.05);
+}
+
+.interview p:nth-of-type(even) {
+	background: #ffffff;
+	border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Slight stagger for flow */
+.interview h3 {
+	margin-left: 0.5rem;
+}
+
+.interview p {
+	margin-left: 1.2rem;
+}
+
+/* Hover glow for questions */
+.interview h3:hover {
+	box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15),
+		0 0 12px var(--aqua);
+	transform: translateY(-2px);
+	transition: all 0.25s ease;
+}
+
+/* Hover glow for answers */
+.interview p:hover {
+	box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12),
+		0 0 10px var(--mint);
+	transform: translateY(-2px);
+	transition: all 0.25s ease;
+}
+
+img:not(.profile-img):not(.game-img):not(.wide-img) {
+	margin: 1rem auto;
+	border-radius: 8px;
+}
+
+.about-bubble {
+	background: #f9f9f9;
+	padding: 18px 22px;
+	border-radius: 16px;
+	margin: 1.2rem 0;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+	border: 1px solid rgba(0,0,0,0.05);
+	transition: all 0.25s ease;
+}
+
+.about-bubble:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 26px rgba(0,0,0,0.12),
+		0 0 10px var(--mint);
+}
+
+.about-section .about-bubble + .about-bubble {
+	margin-top: 1.5rem;
+}
+
+.hobby-bubble {
+	background: #f9f9f9;
+	padding: 18px 22px;
+	border-radius: 16px;
+	margin: 1.5rem 0;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+	border: 1px solid rgba(0,0,0,0.05);
+	transition: all 0.25s ease;
+	position: relative;
+}
+
+.hobby-bubble:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 26px rgba(0,0,0,0.12),
+		0 0 10px var(--mint);
+}
+
+.hobby-section {
+	position: relative;
+	padding-left: 30px;
+}
+
+.hobby-section::before {
+	content: "";
+	position: absolute;
+	left: 12px;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background: rgba(0,0,0,0.06);
+	border-radius: 3px;
+}
+
+.game-grid {
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+	border: 1px solid rgba(0,0,0,0.05);
+	transition: all 0.25s ease;
+}
+
+.game-grid:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 26px rgba(0,0,0,0.12),
+		0 0 10px var(--aqua);
 }

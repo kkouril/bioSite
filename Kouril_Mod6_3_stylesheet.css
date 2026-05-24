@@ -10,7 +10,8 @@
 
     --text-dark: #0A0A0A;
 
-    --font-body: 'Roboto', sans-serif;
+    --font-body: 'Quicksand', sans-serif;
+    --font-heading: 'Baloo 2', cursive;
 
     --spacing-4: 4px;
     --spacing-8: 8px;
@@ -40,6 +41,7 @@ header {
 }
 
 h1 {
+	font-family: var(--font-heading);
 	font-size: 36px;
 	font-weight: bold;
 	color: var(--primary-blue);
@@ -47,12 +49,14 @@ h1 {
 }
 
 h2 {
+	font-family: var(--font-heading);
 	font-size: 26px;
 	font-weight: 600;
 	letter-spacing: -0.3px;
 }
 
 h3 {
+	font-family: var(--font-heading);
 	font-size: 21px;
 	font-weight: 600;
 }
@@ -191,10 +195,12 @@ img {
 
 /* Consistent game image sizing */
 .game-img {
-	max-width: 180px;
-	width: 100%;
+	width: 180px;
+	height: 240px;
+	object-fit: cover;
+	border-radius: 12px;
 	margin: 0 auto 8px auto;
-	border-radius: 8px;
+	display: block;
 }
 
 /* Captions */
@@ -390,4 +396,33 @@ img:not(.profile-img):not(.game-img):not(.wide-img) {
 	transform: translateY(-2px);
 	box-shadow: 0 10px 26px rgba(0,0,0,0.12),
 		0 0 10px var(--aqua);
+}
+
+.landing-img {
+	float: left;
+	max-width: 260px;
+	margin: 0 1.5rem 1rem 0; 
+	border-radius: 16px;
+	border: 2px solid rgba(0,0,0,0.05);
+	box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+	transition: all 0.25s ease;
+}
+
+.landing-img:hover {
+	transform: scale(1.03);
+	box-shadow: 0 12px 28px rgba(0,0,0,0.15),
+		0 0 12px var(--aqua);
+}
+
+.landing-bubble {
+	background: #f9f9f9;
+	padding: 18px 22px;
+	border-radius: 16px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+	border: 1px solid rgba(0,0,0,0.05);
+	margin-top: 0.5rem;
+	display: inline-block;
+	max-width: 600px;
+	clear: both;
+	float: none;
 }
